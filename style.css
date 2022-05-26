@@ -1,0 +1,136 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.ad {
+    width: 100%;
+    text-align: center;
+    background-color: #dff7b9;
+    position: relative;
+    z-index: 2;
+    height: 80px;
+}
+.ad .ad_logo{
+    position: absolute;
+    opacity: 0.6;
+    display: inline-block;
+    margin-top: 63px;
+    margin-left: 1070px;
+    z-index: 1;
+}
+.del_btn{
+    background: url(img/btn.png) no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    border:0;
+}
+header{
+    background-color: rgb(27, 27, 27);
+    border-bottom: 1px solid #888888
+}
+header .logo{
+    position: absolute;
+    top:25px;
+}
+header .header{
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgb(27, 27, 27);
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+header .header .menulist{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+}
+header .header .menulist .left_menulist li{
+    margin:10px 20px 10px 0;
+}
+header .header .menulist .right_menulist li{
+    margin: 10px 0 10px                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 20px;
+}
+header .header .menulist .left_menulist, .right_menulist{
+    display: flex;
+
+}
+
+header .header .menulist .left_menulist li span, .right_menulist li span{
+    color: #888888;
+    font-size: 13px;
+}
+header .header .menulist .left_menulist li span:hover, .right_menulist li span:hover{
+    text-decoration: underline;
+}
+header .header .menulist_1{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header .menulist_1 nav{
+    display: flex;
+}
+header .header .menulist_1 .nav_bar_1,.nav_bar_2{
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+}
+header .header .menulist_1 .nav_bar_1 li a,.nav_bar_2 li a{
+    color: white;
+    display: block;
+    height: 38px;
+}
+header .header .menulist_1 .nav_bar_1 .list{
+    margin-right: 50px;
+}
+header .header .menulist_1 .nav_bar_2 .list{
+    margin-left: 50px;
+}
+header .header .menulist_1 .nav_bar_2 .none{
+    margin: 0;
+}
+header .header .menulist_1 .nav_bar_1{
+padding-right: 125px;
+}
+header .header .menulist_1 .nav_bar_1 .hide_list{
+    display: none;
+}
+header .header .menulist_1 .nav_bar_1 .hide_list a{
+    font-weight: 600;
+    font-size: 13px;
+    color: black;
+    margin-right: 12px;
+    display: block;
+    height: 44px;
+}
+header .header .menulist_1 .nav_bar_2{
+    padding-left: 170px;
+}
+header .header .menulist_1 .right_icons{
+    display: flex;
+    align-items: center;
+}
+header .header .menulist_1 .left_icons{
+    display: flex;
+    align-items: center;
+}
+header .header .menulist_1 .right_icons a img{
+    margin-left: 10px;
+}
+header .header .menulist_1 .left_icons a img{
+    margin-right: 10px;
+}
