@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bc595160b3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>MEGABOX</title>
 </head>
@@ -40,18 +41,44 @@
                         <li class="list">
                             <a href="#"><span>영화</span></a>
                             <ul class="hide_list">
-                                <li><a href=""><span>전체영화</span></a></li>
-                                <li><a href=""><span>큐레이션</span></a></li>
-                                <li><a href=""><span>무비포스트</span></a></li>
+                                <li class="onhover"><a href="#"><span>전체영화</span></a></li>
+                                <li class="onhover1"><a href="#"><span>큐레이션</span></a></li>
+                                <li class="onhover2"><a href="#"><span>무비포스트</span></a></li>
                             </ul>
                         </li>
-                        <li class="list"><a href="#"><span>예매</span></a></li>
-                        <li class="list"><a href="#"><span>극장</span></a></li>
+                        <li class="list1">
+                            <a href="#"><span>예매</span></a>
+                            <ul class="hide_list1">
+                                <li class="onhover"><a href="#"><span>빠른예매</span></a></li>
+                                <li class="onhover1"><a href="#"><span>상영시간표</span></a></li>
+                                <li class="onhover2"><a href="#"><span>더부티크 프레이빗 예매</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="list2">
+                            <a href="#"><span>극장</span></a>
+                            <ul class="hide_list2">
+                                <li class="onhover"><a href="#"><span>전체극장</span></a></li>
+                                <li class="onhover1"><a href="#"><span>특별관</span></a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="nav_bar_2">
-                        <li class="none list"><a href="#" ><span>이벤트</span></a></li>
+                        <li class="none list3">
+                            <a href="#" ><span>이벤트</span></a>
+                            <ul class="hide_list3">
+                                <li class="onhover"><a href="#"><span>진행중 이벤트</span></a></li>
+                                <li class="onhover1"><a href="#"><span>지난 이벤트</span></a></li>
+                                <li class="onhover2"><a href="#"><span>당첨자발표</span></a></li>
+                            </ul>
+                        </li>
                         <li><a href="#"><span>스토어</span></a></li>
-                        <li class="list"><a href="#"><span>해택</span></a></li>
+                        <li class="list4">
+                            <a href="#"><span>해택</span></a>
+                            <ul class="hide_list4">
+                                <li class="onhover"><a href="#"><span>메가박스 맴버십</span></a></li>
+                                <li class="onhover1"><a href="#"><span>제휴/할인</span></a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <div class="right_icons">
@@ -63,6 +90,65 @@
             </div>
         </div>
     </header>
+    <main class="container">
+        <section class="content">
+            <div class="title">
+                <button><span>박스오피스</span></button>
+            </div>
+                <a href="#" title="더 많은 영화보기" class="more">
+                    <span>더 많은 영화보기</span>
+                <i class="fa-solid fa-plus"></i>
+                </a>
+                <ol class="poster">
+                    <li class="p_title1">
+                        <img src="img/쥬라기.jpg" alt="쥬라기월드">
+                        <span class="nums">1</span>
+                        <div class="advance_sale">
+                            <button class="like"><i class="fa-solid fa-heart"></i>94</button>
+                            <button class="ticket"><span>예매</span></button>
+                        </div>
+                    </li>
+                    <li class="p_title2">
+                        <img src="img/닥스.jpg" alt="닥스">
+                        <span class="nums">2</span>
+                        <div class="advance_sale">
+                            <button class="like"><i class="fa-solid fa-heart"></i>95</button>
+                            <button class="ticket"><span>예매</span></button>
+                        </div>
+                    </li>
+                    <li class="p_title3">
+                        <img src="img/그조.jpg" alt="그대가조국">
+                        <span class="nums">3</span>
+                        <div class="advance_sale">
+                            <button class="like"><i class="fa-solid fa-heart"></i>1.6k</button>
+                            <button class="ticket"><span>예매</span></button>
+                        </div>
+                    </li>
+                    <li class="p_title4">
+                        <img src="img/범도.jpg" alt="범죄도시2">
+                        <span class="nums">4</span>
+                        <div class="advance_sale">
+                            <button class="like"><i class="fa-solid fa-heart"></i>6.5k</button>
+                            <button class="ticket"><span>예매</span></button>
+                        </div>
+                    </li>
+                </ol>
+            <ul class="search_link">
+                <li class="movie_search">
+                    <form>
+                        <input type="search" placeholder="영화명을 입력해주세요"> 
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </li>
+                <li class="timetable"><i class="fa-solid fa-calendar-days"></i>상영시간표</li>
+                <li class="box_office"><i class="fa-solid fa-film"></i>박스오피스</li>
+                <li class="quick"><i class="fa-solid fa-ticket"></i>빠른예매</li>
+            </ul>
+            <div>
+                <i class="fa-light fa-computer-mouse-scrollwheel"></i>
+            </div>
+        </section>
+    </main>
     <script src="app.js"></script>
 </body>
 </html>
