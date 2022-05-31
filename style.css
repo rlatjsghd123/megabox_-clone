@@ -153,14 +153,17 @@ header .header .menulist_1 .right_icons a img{
 header .header .menulist_1 .left_icons a img{
     margin-right: 10px;
 }
-.container{
+.bgc{
     background-color: rgb(25, 25, 25);
 }
 .content{
     position: relative;
     width: 1100px;
     margin: 0 auto;
-
+}
+.content p{
+    color: white;
+    font-size: 14px;
 }
 .content .title{
     padding:  78px 0 20px;
@@ -173,15 +176,14 @@ header .header .menulist_1 .left_icons a img{
     outline: 0;
     background-color: transparent;
 }
-.content .title{
-    
-
-}
 .content .title span{
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     border-bottom: 2px solid rgb(172, 172, 172);
     padding: 0 0 5px 0;
+}
+.content .title a{
+    display: block;
 }
 
 .content .more{
@@ -209,6 +211,35 @@ header .header .menulist_1 .left_icons a img{
     border-radius: 5px;
     z-index: 1;
 }
+.content .poster .mx{
+    width: 18px;
+    height: 18px;
+}
+.content .poster .db{
+    height: 18px;
+    width: 45px;
+}
+.content .poster .mx_box{
+    display: inline-block;
+    padding: 8px;
+    opacity: 1;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 3px;
+}
+.content .poster .db_box{
+    display: inline-block;
+    padding: 8px;
+    opacity: 1;
+    position: absolute;
+    top:10px;
+    right: 60px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 3px;
+}
+
 .content .poster .nums{
     position: absolute;
     top: 0;
@@ -219,6 +250,7 @@ header .header .menulist_1 .left_icons a img{
 }
 .content .poster .advance_sale{
     display: flex;
+    margin-top: 6px;
 }
 .content .poster .like{
     width: 80px;
@@ -232,6 +264,7 @@ header .header .menulist_1 .left_icons a img{
     border-color: #555;
     border: 1px solid #503396;
     text-align: center;
+    cursor: pointer;
 }
 
 .content .poster .like i{
@@ -248,4 +281,447 @@ header .header .menulist_1 .left_icons a img{
     border: none;
     font-weight: 600;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.content .poster .wrap{
+    padding: 20px 20px 0;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.8);
+    height: 352px;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+
+.content .poster .summary{
+    font-size: 15px;
+    color: white;
+    overflow: hidden;
+    height: 158px;
+}
+.content .poster .score{
+    width: 205px;
+    padding: 20px 20px;
+    position: absolute;
+    right: 20px;
+    top: 250px;
+    text-align: center;
+    border-top: 1px solid #4d4d4d;
+}
+.content .poster .score .review{
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    padding-right: 10px;
+}
+.content .poster .score .num{
+    font-size: 27px;
+    color: #03b4ab;
+}
+
+.content .search_link{
+    display: flex;
+    height: 75px;
+    width: 1100px;
+    align-items: center;
+    margin-top: 50px;
+    padding: 12px;
+    background-color: rgba(95, 94, 94, 0.1);
+}
+.content .search_link li{
+    width: 25%;
+    text-align: center;
+    color: white;
+    border-right: 1px solid #888888;
+}
+.content .search_link li span:hover{
+    text-decoration: underline;
+}
+.content .search_link li a{
+    display: inline-block;
+    color: white;
+}
+.content .search_link li span{
+    font-size: 15px;
+    line-height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.content .search_link li i{
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    margin-right: 7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.content .search_link .quick{
+    border:none;
+}
+
+.content .search_link input{
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #888888;
+}
+.content .search_link input:focus{
+    border-bottom: 1px solid #888888;
+    outline: none;
+    color: white;
+}
+
+.content .search_link .movie_search button{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.content .search_link .movie_search  form{
+    position: relative;
+}
+.content .search_link .movie_search button i{
+    font-size: 18px;
+    border-bottom: 1px solid #888888;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
+
+.icon{
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 120px;
+}
+
+.icon i{
+    color: white;
+    font-size: 30px;
+    animation: up-down 1s infinite ease-in-out alternate;
+}
+
+@keyframes up-down{
+    from{
+      transform: translatey(0px);
+    }
+    to{
+      transform: translatey(-20px);
+    }
+  }
+
+.title_plus{
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+.title_plus h2{
+    font-size: 30px;
+}
+
+.turn .page span{
+    width: 33.3%;
+    display: block;
+    float: left;
+    height: 100%;
+    border-bottom: 1px solid #503396;
+}
+
+.boon{
+    position: relative;
+}
+
+.boon .bg{
+    height: 530px;
+    background-color: white;
+}
+.boon .p_bg{
+    height: 650px;
+    background-color: #503396;
+}
+
+.boon .cell{
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.boon .cell .img_box img{
+    position: absolute;
+    left: 0;
+}
+.boon .cell .img_box1 img{
+    position: absolute;
+    left: 300px;
+}
+.boon .cell .turn{
+    position: absolute;
+    top: 230px;
+    left:0;
+    width: 290px;
+    display: flex;
+    justify-content: flex-end;
+}
+.ad1 {
+    position:absolute;
+    right: 0;
+}
+.ad1 img{
+    border-radius: 5px;
+}
+.boon .cell .turn .count_bar{
+    padding-left: 5px;
+}
+
+.boon .cell .turn .control_btn button{
+    border:none;
+    outline: none;
+    background-color: transparent;
+    cursor:pointer;
+}
+.boon .event_link{
+    display: flex;
+    position: absolute;
+    top: 327px;
+}
+
+.boon .event_link .size{
+    width: 441px;
+    height: 204px;
+}
+.boon .event_link .small_size{
+    width: 204px;
+    height: 204px;
+    margin-left: 20px;
+}
+.boon .event_link a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.menu {
+    padding: 150px 0 60px;
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #6d6c6c;
+}
+
+.menu a {
+    text-align: center;
+    color: white;
+    display: block;
+    padding: 60px 0 0 0;
+}
+
+.menu .vip{
+    background: url(img/ico-vip-main.png) no-repeat;
+    background-position: center 0;
+}
+.menu .membership{
+    background: url(img/ico-membership-main.png) no-repeat;
+    background-position: center 0;
+}
+.menu .card{
+    background: url(img/ico-card-main.png) no-repeat;
+    background-position: center 0;
+}
+.menu .event{
+    background: url(img/ico-event-main.png) no-repeat;
+    background-position: center 0;
+}
+.menu .store{
+    background: url(img/ico-store-main.png) no-repeat;
+    background-position: center 0;
+}
+
+.open{
+    width: 1100px;
+    margin: 50px auto 0;
+    position: relative;
+}
+.open .grand {
+    width: 200px;
+}
+.open .grand span{
+    display: block;
+    color: white;
+}
+.open .grand .str{
+    display: block;
+    color: white;
+    font-size: 25px;
+    letter-spacing: -1px;
+    padding: 10px 0 25px; 
+}
+.open .control_btn1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+.open .control_btn1 button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: 5px;
+    width: 7px;
+    height: 10px;
+    line-height: 10px;
+    cursor: pointer;
+}
+
+.open .control_btn1 span{
+    letter-spacing: 2px;
+}
+.open .new_open{
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    top: 0;
+    right: 500px;
+}
+
+.open .new_open img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 2;
+}
+.open .new_open .new{
+    position: absolute;
+    top:45px;
+    left: 50px;
+    z-index: 1;
+    text-align: center;
+}
+.open .new_open .new span,strong{
+    color: white;
+    padding-top: 10px;
+}
+.open .new_open .new span:first-child{
+    padding: 0;
+    border: 1px solid #01738b;
+    background-color: #01738b;
+}
+.open .new_open .new span{
+    font-size: 14px;
+    display: inline-block;
+    min-width: 76px;
+    line-height: 22px;
+}
+.open .new_open .new strong{
+    font-size: 23px;
+    display: block;
+}
+.q_bg{
+    background-color: #252451;
+    height: 840px;
+}
+.q .q_title{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 40px;
+}
+.q .q_title h2{
+    color: white;
+    font-size: 27px;
+}
+.q .q_title a{
+    color: #aaaaaa;
+    font-size: 14px;
+}
+.q .q_title a:hover{
+    text-decoration: underline;
+}
+
+.q {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+.q .main_img{
+    display: flex;
+    flex-direction: column;
+    width: 294px;
+}
+.q .main_img .ticket_btn{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    height: 50px;
+}
+.q .main_img .ticket_btn button{
+    width: 50%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.q .main_img .ticket_btn button a{
+    color: white;
+    font-size: 18px;
+}
+.q .main_img .ticket_btn button:first-child{
+    margin-right: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.q .main_img .ticket_btn button:last-child{
+    background-color: #037b94;
+}
+.q .main_img img{
+    border-radius: 15px;
+    width: 100%;
+}
+.q .q_text{
+    position: absolute;
+    top:120px;
+    left: 344px;
+    width: calc(100% - 370px);
+}
+
+
+.q .q_text span{
+    color: white;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.q .q_text .title{
+    color: white;
+    font-size: 33px;
+    border-bottom: 1px solid #4d4d4d;
+    padding-bottom: 30px;
+}
+.q .q_text .summary{
+    color: white;
+    font-size: 15px;
+}
+.q .q_text .movies{
+    display: flex;
+    justify-content: space-between;
+}
+.q .q_text .movies li{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+.q .q_text .movies li img{
+    border-radius: 15px;
+}
+.q .q_text .movies li span{
+    display: block;
+    width:170px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
 }

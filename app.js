@@ -10,11 +10,56 @@ const hide1 =  document.querySelector(".hide_list1");
 const hide2 =  document.querySelector(".hide_list2");
 const hide3 =  document.querySelector(".hide_list3");
 const hide4 =  document.querySelector(".hide_list4");
-
-
+const poster = document.querySelector(".p_title1 a");
+console.log(poster)
+const poster1 = document.querySelector(".p_title2 a");
+const poster2 = document.querySelector(".p_title3 a");
+const poster3 = document.querySelector(".p_title4 a");
+const summary = document.querySelector(".p_title1 a .wrap");
+console.log(summary)
+const summary1 = document.querySelector(".p_title2 a .wrap");
+const summary2 = document.querySelector(".p_title3 a .wrap");
+const summary3 = document.querySelector(".p_title4 a .wrap");
 function adBtnClick(){
     ad.remove()
 }
+function posterMouseOver(){
+    summary.style.display = "block";
+    summary.style.opacity = "1"
+}
+function posterMouseOver1(){
+    summary1.style.display = "block";
+    summary1.style.opacity = "1"
+    summary1.style.transition = "opacity 0.5s"
+}
+function posterMouseOver2(){
+    summary2.style.display = "block";
+    summary2.style.opacity = "1"
+    summary2.style.transition = "opacity 0.5s"
+}
+function posterMouseOver3(){
+    summary3.style.display = "block";
+    summary3.style.opacity = "1"
+    summary3.style.transition = "opacity 0.5s"
+}
+
+function posterMouseOut(){
+    summary.style.display = "none";
+    summary.style.opacity = "0"
+}
+function posterMouseOut1(){
+    summary1.style.display = "none";
+    summary1.style.opacity = "0"
+}
+function posterMouseOut2(){
+    summary2.style.display = "none";
+    summary2.style.opacity = "0"
+}
+function posterMouseOut3(){
+    summary3.style.display = "none";
+    summary3.style.opacity = "0"
+}
+
 function listMouseOver(){
     hide.style.display = "flex";
     hide.style.flexDirection = "column";
@@ -90,6 +135,10 @@ function listMouseOut4(){
     list4.style.border = "none";
 }
 
+
+
+
+
 btn.addEventListener("click", adBtnClick);
 list.addEventListener("mouseover", listMouseOver);
 list1.addEventListener("mouseover", listMouseOver1);
@@ -101,4 +150,12 @@ list1.addEventListener("mouseout", listMouseOut1);
 list2.addEventListener("mouseout", listMouseOut2);
 list3.addEventListener("mouseout", listMouseOut3);
 list4.addEventListener("mouseout", listMouseOut4);
+poster.addEventListener("mouseover", posterMouseOver);
+poster1.addEventListener("mouseover", posterMouseOver1);
+poster2.addEventListener("mouseover", posterMouseOver2);
+poster3.addEventListener("mouseover", posterMouseOver3);
+poster.addEventListener("mouseout", posterMouseOut);
+poster1.addEventListener("mouseout", posterMouseOut1);
+poster2.addEventListener("mouseout", posterMouseOut2);
+poster3.addEventListener("mouseout", posterMouseOut3);
 
