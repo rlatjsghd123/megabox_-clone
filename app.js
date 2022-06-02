@@ -11,15 +11,20 @@ const hide2 =  document.querySelector(".hide_list2");
 const hide3 =  document.querySelector(".hide_list3");
 const hide4 =  document.querySelector(".hide_list4");
 const poster = document.querySelector(".p_title1 a");
-console.log(poster)
 const poster1 = document.querySelector(".p_title2 a");
 const poster2 = document.querySelector(".p_title3 a");
 const poster3 = document.querySelector(".p_title4 a");
 const summary = document.querySelector(".p_title1 a .wrap");
-console.log(summary)
 const summary1 = document.querySelector(".p_title2 a .wrap");
 const summary2 = document.querySelector(".p_title3 a .wrap");
 const summary3 = document.querySelector(".p_title4 a .wrap");
+const leftBtn = document.querySelector(".left_btn");
+const rightBtn = document.querySelector(".right_btn");
+const playBtn = document.querySelector(".play_btn");
+const pauseBtn = document.querySelector(".pause_btn");
+let img1 = document.querySelector("#photo");
+let img2 = document.querySelector("#photo1");
+
 function adBtnClick(){
     ad.remove()
 }
@@ -134,10 +139,40 @@ function listMouseOut4(){
     hide4.style.border = "none";
     list4.style.border = "none";
 }
-
-
-
-
+let num = 0;
+function leftBtnClick(){
+    const countBar = document.querySelector(".count_bar span")
+    if(num == 1) {
+        leftBtn.style.opacity = "0.5" 
+        leftBtn.style.disabled = "true";
+        img1.style.top = "0"; 
+        img1.style.transition ="all 0.5s"
+        return;
+    } else{
+        num--;
+        countBar.innerText = `${num}/3`;
+        img1.style.top = "100px";  
+    } if(num == 2){
+        rightBtn.style.opacity = "1", leftBtn.style.disabled = "true";
+    } 
+    img1.setAttribute("src", `img/해택(${num}).jpg`)
+    img2.setAttribute("src", `img/해택${num}.jpg`)
+}
+console.log(img1)
+function rightBtnClick(){
+    const countBar = document.querySelector(".count_bar span");
+    if(num == 3) {
+        rightBtn.style.opacity = "0.5", leftBtn.style.disabled = "true";
+    } else{
+        num++;
+        countBar.innerText = `${num}/3`;
+    }
+    if(num == 2){
+        leftBtn.style.opacity = "1", leftBtn.style.disabled = "true";
+    }
+    img1.setAttribute("src", `img/해택(${num}).jpg`);
+    img2.setAttribute("src", `img/해택${num}.jpg`);
+}
 
 btn.addEventListener("click", adBtnClick);
 list.addEventListener("mouseover", listMouseOver);
@@ -158,4 +193,7 @@ poster.addEventListener("mouseout", posterMouseOut);
 poster1.addEventListener("mouseout", posterMouseOut1);
 poster2.addEventListener("mouseout", posterMouseOut2);
 poster3.addEventListener("mouseout", posterMouseOut3);
-
+leftBtn.addEventListener("click", leftBtnClick);
+rightBtn.addEventListener("click", rightBtnClick);
+// playBtn.addEventListener("click", playBtnClick);
+// pauseBtn.addEventListener("click", pauseBtnClick);
