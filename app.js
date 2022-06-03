@@ -139,30 +139,28 @@ function listMouseOut4(){
     hide4.style.border = "none";
     list4.style.border = "none";
 }
-let num = 0;
+let num = 1;
 function leftBtnClick(){
     const countBar = document.querySelector(".count_bar span")
     if(num == 1) {
         leftBtn.style.opacity = "0.5" 
         leftBtn.style.disabled = "true";
-        img1.style.top = "0"; 
-        img1.style.transition ="all 0.5s"
         return;
-    } else{
+    }else {
         num--;
         countBar.innerText = `${num}/3`;
-        img1.style.top = "100px";  
     } if(num == 2){
         rightBtn.style.opacity = "1", leftBtn.style.disabled = "true";
     } 
-    img1.setAttribute("src", `img/해택(${num}).jpg`)
-    img2.setAttribute("src", `img/해택${num}.jpg`)
+    img1.setAttribute("src", `img/해택(${num}).jpg`);
+    img2.setAttribute("src", `img/해택${num}.jpg`);
 }
-console.log(img1)
 function rightBtnClick(){
     const countBar = document.querySelector(".count_bar span");
     if(num == 3) {
-        rightBtn.style.opacity = "0.5", leftBtn.style.disabled = "true";
+        rightBtn.style.opacity = "0.5";
+        leftBtn.style.disabled = "true";
+        return;
     } else{
         num++;
         countBar.innerText = `${num}/3`;
@@ -173,6 +171,41 @@ function rightBtnClick(){
     img1.setAttribute("src", `img/해택(${num}).jpg`);
     img2.setAttribute("src", `img/해택${num}.jpg`);
 }
+
+function imgSrcChange(){
+    const countBar = document.querySelector(".count_bar span");
+    if(num == 3){
+        num = 1;
+        countBar.innerText = `${num}/3`;
+    }else if(num == 2){
+        num++;
+        countBar.innerText = `${num}/3`;
+    }else if(num == 1){
+        num++;
+        countBar.innerText = `${num}/3`;
+    }
+        img1.setAttribute("src", `img/해택(${num}).jpg`);
+        img2.setAttribute("src", `img/해택${num}.jpg`);
+}
+let toggle = true;
+let clear = setInterval(imgSrcChange, 2000);
+function playBtnClick(){
+    toggle = true;
+    if(toggle){
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "block";
+    clear = setInterval(imgSrcChange, 2000);
+    }
+}
+function pauseBtnClick(){
+    toggle = false;
+    if(!toggle){
+    pauseBtn.style.display = "none";
+    playBtn.style.display = "block";
+    clearInterval(clear);
+    }
+}
+
 
 btn.addEventListener("click", adBtnClick);
 list.addEventListener("mouseover", listMouseOver);
@@ -195,5 +228,5 @@ poster2.addEventListener("mouseout", posterMouseOut2);
 poster3.addEventListener("mouseout", posterMouseOut3);
 leftBtn.addEventListener("click", leftBtnClick);
 rightBtn.addEventListener("click", rightBtnClick);
-// playBtn.addEventListener("click", playBtnClick);
-// pauseBtn.addEventListener("click", pauseBtnClick);
+playBtn.addEventListener("click", playBtnClick)
+pauseBtn.addEventListener("click", pauseBtnClick);
